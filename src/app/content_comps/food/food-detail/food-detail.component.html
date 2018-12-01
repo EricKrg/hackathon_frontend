@@ -18,16 +18,17 @@
                   <button class = "btn  btn-danger"> remove all</button>
         </div>
       </div>
-      <div class = "card-deck alert alert-light">
-          <div class="card-deck">
-          <div *ngFor="let el of instaData" 
-          class="card" style="width: 18rem;">
-            <img class="card-img-top" src={{el.imageURL}} alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text">{{el.name}}</p>
-            </div>
-          </div>
-          </div>
-        </div>
+      <div class = "card-deck alert alert-light scroll">
+        <ul class="list-group">
+        <blockquote class="twitter-tweet" *ngFor="let el of foodData"
+        (mouseenter) ="mouseEnter(el) "  (mouseleave) ="mouseLeave(el)"
+        >
+        {{el.name}} 
+          <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" {{ aria-valuenow=el. aria-valuemin= + " + "  }} aria-valuemax="100"></div>
+              </div>
+          <span *ngFor="let tag of el.type" class="badge badge-pill badge-danger">{{tag}}</span>
+        </blockquote>
+        </ul>
       </div>
   </div>

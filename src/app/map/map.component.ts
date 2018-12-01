@@ -5,6 +5,7 @@ import {latLng, tileLayer, map, Map, locationfound, geoJSON, polygon, circle, Pa
 import { LocatorService } from '../locator.service';
 import { DataFetcherService } from '../data-fetcher.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Food } from '../shared/Food';
 
 
 @Component({
@@ -94,12 +95,32 @@ export class MapComponent implements OnInit {
         let tweet = circle([res.latitude,res.longitude],{color: '#1dcaff',fillOpacity: 0.5, radius: 5000 })
         tweet.addTo(this.map);
         this.map.setView([res.latitude,res.longitude],12)
-        
+      })
+    }
+  
+    //fooood
+    if(this.router.url === "/food"){
+      this.locator.posEmit.subscribe((res: Coordinates) => {
+        console.log(res.longitude)
+      this.datafetcher.foodResponse.subscribe((res: Food[]) => {
+        for (const food of res) {
+          console.log(food)
+          let foodCircle = circle([food.lat,food.lng],{color: '#ffc107 ',fillOpacity: 0.5, radius: 10 }).bindPopup(food.name);
+          foodCircle.addTo(this.map);
+        }
+        })
         
       })
-      
-        
+      this.datafetcher.activePos.subscribe((res) => { 
+        console.log(res)
+        this.geojsonLayers.clearLayers();
+        let foodCircle = circle([res.lat,res.lng],{color:"red",fillOpacity: 0.5, radius: 30 }).bindPopup(res.name);
+        foodCircle.addTo(this.geojsonLayers)
+        this.geojsonLayers.addTo(this.map)
+        this.map.setView([res.lat,res.lng],16)
+      });
     }
+  
 
  
     

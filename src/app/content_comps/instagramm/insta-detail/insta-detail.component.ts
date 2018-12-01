@@ -25,9 +25,7 @@ export class InstaDetailComponent implements OnInit {
         this.instaData = res;
         console.log(this.instaData)
       });
-    })
-    this.dataService.instaResponse.subscribe((res) => console.log(res));
-    
+    })    
   }
 
 }

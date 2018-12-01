@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataFetcherService } from '../../data-fetcher.service';
 
 @Component({
   selector: 'app-food',
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class FoodComponent implements OnInit {
   name: string = "Food & Drinks";
   total: number = 0;
-  constructor() { }
+  content: any;
+  constructor(private dataFetcher: DataFetcherService) { }
 
   ngOnInit() {
+    this.dataFetcher.foodResponse.subscribe((res) => {
+      this.content = res;
+      this.total = this.content.length
+    })
     
   }
 

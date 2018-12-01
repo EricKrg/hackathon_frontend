@@ -18,6 +18,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { LocatorService } from './locator.service';
 import { TwitterDetailComponent } from './content_comps/twitter/twitter-detail/twitter-detail.component';
+import { FoodDetailComponent } from './content_comps/food/food-detail/food-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TwitterDetailComponent } from './content_comps/twitter/twitter-detail/t
     InstagrammComponent,
     InstaDetailComponent,
     HomeComponent,
-    TwitterDetailComponent
+    TwitterDetailComponent,
+    FoodDetailComponent
   ],
   imports: [
     BrowserModule,
