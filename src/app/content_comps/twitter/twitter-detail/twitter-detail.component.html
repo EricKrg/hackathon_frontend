@@ -1,0 +1,37 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">{{this.name}}
+        <i class="fa fa-twitter"></i>
+    </li>
+  </ol>
+</nav>
+
+
+<div class="row row-flex" style="height: 100%">
+        <div class="h-100 col-8">  
+            <app-map></app-map>
+          </div>
+        <div class="col" >
+            <div class="card text-white bg-dark mb-3 d-flex">
+                <div class="card-body">
+                  <h5 class="card-title"> Map controls</h5>
+                  <br>
+                  <button class = "btn  btn-danger"> remove all</button>
+        </div>
+      </div>
+      <div class = "card-deck alert alert-light scroll">
+          <ul class="list-group">
+          <blockquote class="twitter-tweet" *ngFor="let el of twitterData" >{{el.text}}
+          </blockquote>
+          </ul>
+          </div>
+        
+      </div>
+  </div>
+
+
+
+
+
+
+  

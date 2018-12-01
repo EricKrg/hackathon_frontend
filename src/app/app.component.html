@@ -1,20 +1,28 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <nav class="navbar fixed-top navbar-light bg-light flex-md-nowrap p-2 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"></a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" href="#"> search </a>
+      </li>
+    </ul>
+  </nav>
+  <div id="wrapper">
+      <ul class="sidebar navbar-nav">
+          <div class="icon-bar sidebar-sticky" style="height: 100%">
+              <a href="" class="nav-link" routerLinkActive="active" ><i class="fa fa-home"></i></a> 
+              <a href="/instagram" class="nav-link" routerLinkActive="active"><i class="fa fa-instagram"></i></a> 
+              <a href ="/twitter" class="nav-link" ><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a href="#"><i class="fa fa-tripadvisor"></i></a> 
+              <a href="#"><i class="fa fa-coffee"></i></a>
+              <a><i class="fa fa-wpexplorer"></i> </a>
+            </div>
+        </ul>
+      
+    <div id="content-wrapper">
+        <router-outlet></router-outlet>       
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+  
