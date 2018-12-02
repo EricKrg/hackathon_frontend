@@ -1,0 +1,35 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">{{this.name}}
+        
+    </li>
+  </ol>
+</nav>
+
+<div class="row row-flex" style="height: 100%">
+        <div class="h-100 col-8">  
+            <app-map></app-map>
+          </div>
+        <div class="col" >
+            <div class="card text-white bg-dark mb-3 d-flex">
+                <div class="card-body">
+                  <h5 class="card-title"> Map controls</h5>
+                  <br>
+                  <button class = "btn  btn-danger"> remove all</button>
+        </div>
+      </div>
+      <div class = "card-deck alert alert-light scroll d-flex">
+        <ul class="list-group d-flex">
+        <blockquote class="twitter-tweet w-100" *ngFor="let el of routingData"
+        (mouseenter) ="mouseEnter(el)">
+        <h5>{{el.name}} </h5>
+        
+        <progress role="progressbar" class="progress-bar bg-success" value="{{(100/5)*el.rating}}" max="100">
+          </progress>
+          <br>
+          <h6>Rating: <span class="badge badge-secondary">{{(100/5)*el.rating}}/100</span></h6>
+          <span *ngFor="let tag of el.type" class="badge badge-pill badge-warning">{{tag}}</span>
+        </blockquote>
+        </ul>
+      </div>
+  </div>
