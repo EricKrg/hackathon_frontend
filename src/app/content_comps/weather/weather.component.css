@@ -1,0 +1,8 @@
+span {
+    padding: 2px;
+    margin-left: -15px;
+}
+
+.alert {
+    border-radius: 0 !important;
+  }
