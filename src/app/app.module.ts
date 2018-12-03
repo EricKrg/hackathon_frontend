@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './layout/navbar/navbar.component';
 import { TwitterComponent } from './content_comps/twitter/twitter.component';
 import { TripadvisorComponent } from './content_comps/tripadvisor/tripadvisor.component';
 import { FoodComponent } from './content_comps/food/food.component';
@@ -19,11 +18,13 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { LocatorService } from './locator.service';
 import { TwitterDetailComponent } from './content_comps/twitter/twitter-detail/twitter-detail.component';
 import { FoodDetailComponent } from './content_comps/food/food-detail/food-detail.component';
+import { ToDoDetailComponent } from './content_comps/to-do/to-do-detail/to-do-detail.component';
+import { RoutingComponent } from './content_comps/routing/routing.component';
+import { WeatherComponent } from './content_comps/weather/weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     TwitterComponent,
     TripadvisorComponent,
     FoodComponent,
@@ -34,7 +35,10 @@ import { FoodDetailComponent } from './content_comps/food/food-detail/food-detai
     InstaDetailComponent,
     HomeComponent,
     TwitterDetailComponent,
-    FoodDetailComponent
+    FoodDetailComponent,
+    ToDoDetailComponent,
+    RoutingComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,

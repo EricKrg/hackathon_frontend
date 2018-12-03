@@ -3,3 +3,6 @@
 
 }
 
+.leaflet-routing-alternatives-container .leaflet-routing-alt .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    display: none;
+}

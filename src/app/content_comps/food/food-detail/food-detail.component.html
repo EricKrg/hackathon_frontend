@@ -22,7 +22,7 @@
         (mouseenter) ="mouseEnter(el)" (click) = "mouseClick(el)"
         >
         <h5>{{el.name}} </h5>
-        <progress role="progressbar" class="progress-bar bg-warning" value="{{(100/5)*el.rating}}" max="100">
+        <progress role="progressbar" class="progress-bar bg-warning" value="{{el.rating}}" max="5">
           </progress>
           <br>
           <h6>Rating: <span class="badge badge-secondary">{{(100/5)*el.rating}}/100</span></h6>

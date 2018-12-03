@@ -4,6 +4,8 @@ import { InstaDetailComponent } from './content_comps/instagramm/insta-detail/in
 import { HomeComponent } from './content_comps/home/home.component';
 import { TwitterDetailComponent } from './content_comps/twitter/twitter-detail/twitter-detail.component';
 import { FoodDetailComponent } from './content_comps/food/food-detail/food-detail.component';
+import { ToDoDetailComponent } from './content_comps/to-do/to-do-detail/to-do-detail.component';
+import { RoutingComponent } from './content_comps/routing/routing.component';
 
 const appRoutes = [
     // main routes
@@ -11,6 +13,8 @@ const appRoutes = [
     {path: 'instagram', component: InstaDetailComponent},
     {path: 'twitter', component: TwitterDetailComponent},
     {path: 'food', component: FoodDetailComponent},
+    {path: 'poi', component: ToDoDetailComponent},
+    {path: 'routing', component: RoutingComponent},
 
 ]
 
