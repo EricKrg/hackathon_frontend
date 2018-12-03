@@ -19,11 +19,9 @@ export class FoodDetailComponent implements OnInit {
   mouseEnter(el: Food){
     console.log(el)
     this.dataService.activePos.emit(el);
-
   }
-
-  mouseLeave(el: Food){
-    console.log(el)
+  mouseClick(el: Food){
+    this.dataService.route.emit(el)
   }
 
   ngOnInit() {
@@ -33,11 +31,6 @@ export class FoodDetailComponent implements OnInit {
       this.dataService.fetchFood(coords.latitude,coords.longitude ,5000).subscribe(res => {
         this.foodData = res;
       });
-      
     })
-    
-  
   }
-
-
 }

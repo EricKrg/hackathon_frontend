@@ -10,23 +10,21 @@
         <div class="h-100 col-8">  
             <app-map></app-map>
           </div>
-        <div class="col" >
-            <div class="card text-white bg-dark mb-3 d-flex">
-                <div class="card-body">
-                  <h5 class="card-title"> Map controls</h5>
-                  <br>
-                  <button class = "btn  btn-danger"> remove all</button>
-        </div>
-      </div>
-      <div class = "card-deck alert alert-light">
-          <div class="card-deck">
+          <div class="col" >
+              <div class="card text-white bg-dark mb-3 d-flex">
+                  <div class="card-body">
+                    <h6 class="card-title">Instagram-Feed:</h6>
+          </div>  
+        </div> 
+      <div class = "scroll alert alert-light">
           <div *ngFor="let el of instaData" 
-          class="card" style="width: 18rem;">
+          class="card" style="width: 100%;"
+          (mouseenter)="mouseOver(el)"
+          >
             <img class="card-img-top" src={{el.imageURL}} alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">{{el.name}}</p>
+                <span class="badge badge-pill badge-dark">{{el.name}}</span>
             </div>
-          </div>
           </div>
         </div>
       </div>

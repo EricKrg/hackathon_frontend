@@ -15,8 +15,11 @@ export class InstaDetailComponent implements OnInit {
     public dataService: DataFetcherService,
     public locService: LocatorService) {  
      }
+  mouseOver(el: LocationData): void{
+    this.dataService.activePos.emit(el);
+  }
 
-  ngOnInit() {
+  ngOnInit(): void {
     console.log("insta init");
     this.locService.posEmit.subscribe((res: Coordinates) => {
       let coords = res;

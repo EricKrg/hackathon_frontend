@@ -16,8 +16,6 @@ export class FoodComponent implements OnInit {
     this.dataFetcher.foodResponse.subscribe((res) => {
       this.content = res;
       this.total = this.content.length
-    })
-    
+    })    
   }
-
 }

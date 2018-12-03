@@ -1,7 +1,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item active" aria-current="page">{{this.name}}
-    <i class="fa fa-instagram"></i>
+        <i class="fa fa-coffee"></i>
     </li>
   </ol>
 </nav>
@@ -13,20 +13,19 @@
         <div class="col" >
             <div class="card text-white bg-dark mb-3 d-flex">
                 <div class="card-body">
-                  <h5 class="card-title"> Map controls</h5>
-                  <br>
-                  <button class = "btn  btn-danger"> remove all</button>
-        </div>
-      </div>
-      <div class = "card-deck alert alert-light scroll">
+                  <h6 class="card-title">Food Places:</h6>
+        </div>  
+      </div> 
+      <div class = "card-deck alert alert-light scroll d-flex w-100">
         <ul class="list-group">
         <blockquote class="twitter-tweet" *ngFor="let el of foodData"
-        (mouseenter) ="mouseEnter(el) "  (mouseleave) ="mouseLeave(el)"
+        (mouseenter) ="mouseEnter(el)" (click) = "mouseClick(el)"
         >
-        {{el.name}} 
-          <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" {{ aria-valuenow=el. aria-valuemin= + " + "  }} aria-valuemax="100"></div>
-              </div>
+        <h5>{{el.name}} </h5>
+        <progress role="progressbar" class="progress-bar bg-warning" value="{{(100/5)*el.rating}}" max="100">
+          </progress>
+          <br>
+          <h6>Rating: <span class="badge badge-secondary">{{(100/5)*el.rating}}/100</span></h6>
           <span *ngFor="let tag of el.type" class="badge badge-pill badge-danger">{{tag}}</span>
         </blockquote>
         </ul>

@@ -22,7 +22,6 @@ export class WeatherComponent implements OnInit {
         console.log(this.weatherData)
       });
       
-    })
-    
-  
+    })  
+  }
 }
